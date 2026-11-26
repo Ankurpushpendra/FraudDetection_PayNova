@@ -1,0 +1,79 @@
+================================================================================
+  HANDS-ON INSTRUCTIONS — Final Case Study: Real-Time Fraud Detection
+================================================================================
+
+WHAT YOU'RE BUILDING
+---------------------
+A 4-agent fraud detection pipeline for PayNova using:
+  Prompt Engineering · MCP Tool Schemas · Claude Tool-Calling · LangGraph
+
+
+--------------------------------------------------------------------------------
+BEFORE YOU START
+--------------------------------------------------------------------------------
+
+1. Get your Anthropic API key from your trainer.
+
+2. Create a  .env  file in the same folder as the notebook:
+       ANTHROPIC_API_KEY=sk-ant-xxxxxxxxxxxxxxxx
+
+3. Open this project folder in VS Code.
+   Claude Code is in the sidebar — Ctrl+Shift+P → "Claude: Open Chat".
+   Select any TODO block and ask Claude Code to implement it.
+
+4. Open  Final_Case_Study.ipynb  in VS Code or JupyterLab.
+
+5. Run cells STRICTLY TOP TO BOTTOM.
+
+
+--------------------------------------------------------------------------------
+STEPS
+--------------------------------------------------------------------------------
+
+1  Run the Setup Cell         — installs all packages
+2  Run the Imports Cell       — initialises the Claude client
+3  Read Section 1 (Mock Data) — DO NOT MODIFY these globals
+4  Section 2 [TODO]           — write system prompts for all 4 agents
+5  Section 3 [TODO]           — implement all 4 MCP server classes + tools
+6  Section 5 [TODO]           — implement all 4 LangGraph node functions
+7  Section 6 [TODO]           — implement route_by_risk() and build_fraud_detection_graph()
+8  Section 7                  — run both demo scenarios and verify:
+                                  Scenario 1 → APPROVE
+                                  Scenario 2 → BLOCK_AND_ALERT
+9  Answer the Discussion Questions in the final markdown cell
+
+
+--------------------------------------------------------------------------------
+OPTIONAL BONUS EXERCISES
+--------------------------------------------------------------------------------
+
+Bonus 1  Add a 3rd scenario that produces FLAG_FOR_REVIEW
+Bonus 2  Add a check_card_reported_stolen tool to TransactionDBMCPServer
+Bonus 3  Run behavioral_analyst + device_fingerprint_analyst in PARALLEL (fan-out)
+Bonus 4  Wrap the pipeline in a Streamlit app (run Bonus 4 cell → generates fraud_app.py)
+
+
+--------------------------------------------------------------------------------
+SUBMISSION CHECKLIST
+--------------------------------------------------------------------------------
+
+  [ ]  .env file created with a valid API key
+  [ ]  All 4 system prompts implemented (Section 2)
+  [ ]  All 4 MCP server classes + handlers working (Section 3)
+  [ ]  All 4 LangGraph agent nodes complete (Section 5)
+  [ ]  Graph compiles and conditional routing works (Section 6)
+  [ ]  Scenario 1 → APPROVE
+  [ ]  Scenario 2 → BLOCK_AND_ALERT
+  [ ]  Discussion Questions answered
+  [ ]  File renamed to:  FinalCS_FraudDetection_<YourName>_<EmpID>.ipynb
+
+  OPTIONAL:
+  [ ]  Bonus 1: FLAG_FOR_REVIEW scenario works
+  [ ]  Bonus 2: Stolen card tool added and working
+  [ ]  Bonus 3: Parallel fan-out graph compiles and runs
+  [ ]  Bonus 4: Streamlit app launches with both preset scenarios
+
+  ⚠️  Zero errors in any cell at submission time.
+      Run all cells top-to-bottom one final time before submitting.
+
+
